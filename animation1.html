@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .canasta{
+            display: ruby-text; 
+            justify-content: center; 
+            background-color: #607D8B;
+            height: 100px; 
+            width: 100%;
+            border: 1px solid black; 
+            align-items: center;
+        }
+
+        .pelota{
+            height: 100px; 
+            width: 100px; 
+            position: absolute;
+            justify-content: center;
+            text-align: center;
+            border-radius: 50%; 
+            border-color: rebeccapurple;
+            transition: 1s;
+        }
+
+        .canasta .a{
+            left: 15px;
+            background-color: greenyellow;
+        }
+
+        .canasta .b{
+            right: 15px;
+            background-color: black;
+        }
+
+        .canasta:hover .pelota.a{
+            left: calc(50% - 100px)
+        }
+
+        .canasta:hover .pelota.b{
+            right: calc(50% - 100px)
+        }
+
+    </style>
+</head>
+<body>
+    <div class="canasta">
+        <div class="pelota a"></div>
+        <div class="pelota b"></div>
+    </div>
+</body>
+</html>
